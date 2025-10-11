@@ -6,7 +6,7 @@ on:
       # Trigger workflow jika ada perubahan pada file data mentah
       - 'Software_Professional_Salaries.csv' 
       # Atau jika ada perubahan pada script preprocessing itu sendiri
-      - 'preprocessing/automate_Nama-siswa.py'
+      - 'preprocessing/automate_Mohammed-Noeno-Hadianto.py'
   workflow_dispatch: # Memungkinkan eksekusi manual dari GitHub UI
 
 jobs:
