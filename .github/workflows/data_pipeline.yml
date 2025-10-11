@@ -39,7 +39,7 @@ jobs:
           python preprocessing/automate_Mohammed-Noeno-Hadianto.py
           
       - name: Upload Processed Data as Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: processed-data
           path: preprocessing/namadataset_preprocessing/*
