@@ -41,5 +41,6 @@ jobs:
       - name: Commit and Push Processed Data
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          file_pattern: 'preprocessing/namadataset_preprocessing/*' 
+          file_pattern: 'preprocessing/namadataset_preprocessing/*'
           commit_message: "CI/CD: Data Preprocessing berhasil dijalankan"
+          token: ${{ secrets.PAT_TOKEN }}
