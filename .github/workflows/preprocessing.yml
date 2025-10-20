@@ -1,4 +1,3 @@
-# Nama workflow Anda
 name: Automated Data Preprocessing CI
 
 # Trigger: Kapan workflow ini akan berjalan
@@ -7,12 +6,11 @@ on:
   push:
     branches: [ "main" ]
   
-  # Memungkinkan Anda menjalankan workflow ini secara manual dari tab Actions
+  # menjalankan workflow ini secara manual dari tab Actions
   workflow_dispatch:
 
 # Daftar pekerjaan (jobs) yang akan dieksekusi
 jobs:
-  # Kita hanya punya satu job: 'preprocess'
   preprocess:
     # Menggunakan OS Ubuntu versi terbaru
     runs-on: ubuntu-latest
@@ -27,7 +25,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10' # Anda bisa ganti versi Python jika perlu
+          python-version: '3.10' 
 
       # 3. Meng-install dependencies dari file requirements.txt
       - name: Install dependencies
@@ -40,8 +38,8 @@ jobs:
         run: |
           # Pastikan path input dan output ini sesuai dengan struktur repo Anda
           python preprocessing/automate_Mohammed-Noeno-Hadianto.py \
-            --input "namadataset_raw/netflix_titles.csv" \
-            --output "namadataset_preprocessing/netflix_preprocessed.csv"
+            --input "netflix_titles.csv" \
+            --output "netflix_preprocessed.csv"
             
       # 5. Mengunggah hasil preprocessing sebagai artefak
       - name: Upload preprocessed dataset as artifact
@@ -51,4 +49,4 @@ jobs:
           name: preprocessed-dataset
           
           # Path ke file yang ingin Anda unggah
-          path: namadataset_preprocessing/netflix_preprocessed.csv
+          path: preprocessing/netflix_preprocessed.csv
