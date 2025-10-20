@@ -39,7 +39,7 @@ jobs:
       - name: Run preprocessing script
         run: |
           # Pastikan path input dan output ini sesuai dengan struktur repo Anda
-          python preprocessing/automate_Nama-siswa.py \
+          python preprocessing/automate_Mohammed-Noeno-Hadianto.py \
             --input "namadataset_raw/netflix_titles.csv" \
             --output "namadataset_preprocessing/netflix_preprocessed.csv"
             
